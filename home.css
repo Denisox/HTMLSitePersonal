@@ -1,0 +1,397 @@
+
+.header{
+  width: 100%;
+  height: 300px;
+  background: url("./cohccklopv.jpeg");
+  background-size: cover;
+  border-bottom: 5px solid #cfe3d4
+}
+
+body{
+  background-color: aliceblue;
+}
+.header-pic{
+  display: block;
+  border-radius: 50%;
+  max-width:20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:-160px
+}
+.header-pic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav{
+  background-color:khaki;
+  height: 300%;
+  display: block;
+  margin-top:-144px  
+}
+.inside{
+  display: block;
+  border-radius: 50%;
+  max-width:40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 400px;
+}
+.button1{
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: azure;
+  outline: none;
+  font-family: Papyrus;
+}
+
+.button1:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#home-button{
+  position: absolute;
+  margin-left: 5%;
+}
+
+#about-button{
+  position: absolute;
+  margin-left: 20%;
+}
+
+#interests-button{
+  position: absolute;
+  margin-left: 70%;
+}
+
+#contacts-button{
+  position: absolute;
+  margin-left: 87%;
+}
+
+.textfield{
+  display: block;
+  position: relative; 
+  top: 200px;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Garamond, serif;
+  font-size: larger;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #858FFB, #ACF7B7);
+}
+.footer{
+  display: block;
+  width: 100%;
+}
+
+
+
+.About{
+  display: block;
+  position: relative; 
+  top: 200px;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  font-family: Garamond, serif;
+}
+
+.column {
+  display: block;
+  position: relative; 
+  top: 300px;
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bold{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+ul{
+  font-family: Garamond, serif;
+  font-size: 20px;
+}
+
+/* timeline CSS */
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  font-size: larger;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: none;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-image: linear-gradient(to bottom, #ffa500 , #acf7B7);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-image: linear-gradient(to bottom right, #ffa500 , #acf7B7);
+  border: 4px solid #3e14fa;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid azure;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #d4ebb0;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid azure;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #FDDEA8 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-image: linear-gradient(to bottom right, #ffdda8 , #acf7B7);
+  position: relative;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: black;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.education{
+  display: flex;
+  justify-content: center;
+}
+
+.work{
+  position: relative;
+  text-align: center;
+  font-family: Garamond, serif;
+  font-size: 30px;
+  border: 10px solid;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  border-color: black;
+}
+.team{
+  position: relative;
+  top: 100px;
+  text-align: center;
+  color:gold;
+}
+#workField{
+  display: none;
+}
+.teampic{
+  width: 100%;
+  height: 100%;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.interestbox{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  font-family: Garamond, serif; 
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container1 {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides1 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor1 {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev1,
+.next1 {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev1 {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev1:hover,
+.next1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext1 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column1 {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo1 {
+  opacity: 0.6;
+}
+
+.active,
+.demo1:hover {
+  opacity: 1;
+}
+.contacts{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  font-family: Garamond, serif; 
+}

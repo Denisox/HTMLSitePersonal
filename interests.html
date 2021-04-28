@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="header"></div>
+    </main>
+    <img src="Talking-About-Interests-And-Hobbies.jpg" alt="Profile pic" class="header-pic">
+    <nav>
+
+        <button id="home-button" class="button1" type="button" ,
+            onclick="window.location.href='site.html'">Home</button>
+        <button id="about-button" class="button1" type="button" ,
+            onclick="window.location.href='about.html'">About</button>
+        <button id="interests-button" class="button1" type="button" ,
+            onclick="window.location.href='interests.html'">Interests</button>
+        <button id="contacts-button" class="button1" type="button", onclick="window.location.href='contacts.html'">Contacts</button>
+
+    </nav>
+
+    <div class="interestbox">
+        <img src="Some-Council-Staff-are-blocking-technology.png" alt="Technology" , class="inside">
+        <h1>Technology</h1>
+        <img src="divider.png" alt="divider">
+        <p id="textbox"> For me the technology is a huge passion. I love to read different articles about the flagmans
+            of each company when it comes to mobile devices. I also read a lot about the current trends in the
+            programming world. One day I hope that I will be able to live in a fully automated smart house - why the
+            life has to be hard, when it can be so simple? &#128521
+        </p>
+        <img src="Kirkjufell-vs.-Matterhorn-Worlds-most-beautiful-mountain-battle-3-1000x600.jpg" , alt="mountain" ,
+            class="inside">
+        <h1>
+            Journeys
+        </h1>
+        <img src="divider.png" alt="divider">
+
+        <p>
+            I simply love travelling! Here you will find more about my journeys so far.
+        </p>
+
+        <!-- Container for the image gallery -->
+        <div class="container1">
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides1">
+                <div class="numbertext1">1 / 6</div>
+                <img src="Pirin.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext1">2 / 6</div>
+                <img src="Luxemburg.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext1">3 / 6</div>
+                <img src="Cologne.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext1">4 / 6</div>
+                <img src="Switzerland.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext1">5 / 6</div>
+                <img src="HutRai.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <div class="numbertext1">6 / 6</div>
+                <img src="Valetta.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Thumbnail images -->
+            <div class="row1">
+                <div class="column1">
+                    <img class="demo cursor1" src="Pirin.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pirin">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor1" src="Luxemburg.jpg" style="width:100%" onclick="currentSlide(2)"
+                        alt="Luxemburg">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor1" src="Cologne.jpg" style="width:100%" onclick="currentSlide(3)"
+                        alt="Germany">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor1" src="Switzerland.jpg" style="width:100%" onclick="currentSlide(4)"
+                        alt="Switzerland">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor1" src="HutRai.jpg" style="width:100%" onclick="currentSlide(5)"
+                        alt="StaraPlanina">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor1" src="Valetta.jpg" style="width:100%" onclick="currentSlide(6)"
+                        alt="Malta">
+                </div>
+            </div>
+        </div>
+
+        <img src="what-to-do-in-free-time-small.jpg" alt="freetime" class="inside">
+        <h1>Games, movies & books</h1>
+        <img src="divider.png" alt="divider">
+        <p>In my freetime, just like everyone else, I like to go out with friends. Still I love to take time for myself and chill at home. I like reading books - mostly Fantasy. I am also a huge fan of the Star Wars Series. The whole universe is just great - how intelligent you have to be such a big universe with so many different storylines? Oh, and I also like anime - I guess that is why it is a dream for me to visit Japan,  hmm... Oh and about the gaming - if it is chill - it is for me ^_^</p>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides1");
+            var dots = document.getElementsByClassName("demo1");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</body>
+
+</html>
