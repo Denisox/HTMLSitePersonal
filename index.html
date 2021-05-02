@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,37 @@
     <link rel="stylesheet" href="home.css">
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <div class="header"></div>
     </main>
-    <img src="48393043_2015501688502911_7973981533805477888_n.jpg" alt="Profile pic" class="header-pic">
+
     <nav>
+        <div class="buttons1">
+                <button id="home-button" class="button1" class="outer" type="button" ,
+                    onclick="window.location.href='index.html'">Home</button>
+                <button id="about-button" class="button1" class="inner" type="button" ,
+                    onclick="window.location.href='about.html'">About</button>
+            <div class="header-pic">
+                <img src="48393043_2015501688502911_7973981533805477888_n.jpg" alt="Profile pic" class="pic1">
+            </div>
+                <button id="interests-button" class="button1" class="inner" type="button" ,
+                    onclick="window.location.href='interests.html'">Interests</button>
+                <button id="contacts-button" class="button1" class="outer" type="button" ,
+                    onclick="window.location.href='contacts.html'">Contacts</button>
         
-            <button  id = "home-button" class = "button1" type="button", onclick="window.location.href='index.html'">Home</button>
-            <button  id = "about-button" class = "button1" type="button", onclick="window.location.href='about.html'">About</button>
-            <button id = "interests-button" class = "button1" type="button", onclick="window.location.href='interests.html'">Interests</button>
-            <button  id = "contacts-button" class = "button1" type="button" , onclick="window.location.href='contacts.html'">Contacts</button>
-       
+        </div>
     </nav>
-    
-    <div class = "textfield">
+
+    <div class="textfield">
         <h1>Hey there! Welcome to my page!</h1>
         <h2>I hope you enjoy your time here! &#128523 </h2>
     </div>
 
     <footer class="footer">
-        <img src="footer-png.png" alt = "Footer pic">
+        <img src="footer-png.png" alt="Footer pic">
     </footer>
 </body>
-</html> 
+
+</html>
