@@ -51,12 +51,11 @@ nav{
 }
 .inside{
   display: flex;
-  flex-direction: row;
   border-radius: 50%;
   max-width:40%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60%;
+  margin-top: 50%;
 }
 
 .button1{
@@ -432,5 +431,8 @@ img{
 
 .interestbox{
   font-size: 20px;
+}
+.inside{
+  max-width: 80%;
 }
 }
