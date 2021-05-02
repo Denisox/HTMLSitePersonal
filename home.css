@@ -50,12 +50,13 @@ nav{
   margin-top: -9%  
 }
 .inside{
-  display: block;
+  display: flex;
+  flex-direction: row;
   border-radius: 50%;
   max-width:40%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 400px;
+  margin-top: 60%;
 }
 
 .button1{
