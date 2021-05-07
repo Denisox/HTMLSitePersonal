@@ -435,4 +435,7 @@ img{
 .inside{
   max-width: 80%;
 }
+.textfield{
+  font-size: smaller;
+}
 }
